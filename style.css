@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css?family=Outfit:700|Poppins:400");
+
+:root {
+  --text: hsl(0, 0%, 89%);
+  --text_muted: hsla(0, 0%, 89%, 0.5);
+  --border: hsla(0, 0%, 89%, 0.2);
+  --background: hsl(0, 0%, 6%);
+  --primary: hsl(243, 86%, 83%);
+  --primary_dim: hsla(243, 86%, 83%, 1);
+  --secondary: hsla(240, 6%, 15%, 0.5);
+  --accent: hsl(198, 100%, 84%);
+  --accent_dim: hsla(198, 100%, 84%, 1);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  overflow-x: hidden;
+  font-family: "Poppins";
+  font-weight: 400;
+  color: var(--text);
+  padding: 0 15vw 2rem 15vw;
+  gap: 2rem;
+  background: var(--background);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Outfit";
+  font-weight: 700;
+  color: var(--text);
+}
+
+html {
+  font-size: 100%;
+}
+
+/* 16px */
+
+h1 {
+  font-size: 4.21rem;
+  /* 67.36px */
+}
+
+h2 {
+  font-size: 3.158rem;
+  /* 50.56px */
+}
+
+h3 {
+  font-size: 2.369rem;
+  /* 37.92px */
+}
+
+h4 {
+  font-size: 1.777rem;
+  /* 28.48px */
+}
+
+h5 {
+  font-size: 1.333rem;
+  /* 21.28px */
+}
+
+small {
+  font-size: 0.75rem;
+  /* 12px */
+}
+
+p,
+a {
+  font-size: 0.9rem;
+}
+
+a:hover {
+  color: var(--primary);
+}
+
+span {
+  color: var(--text);
+}
+
+tag {
+  border-radius: 1rem;
+  padding: 0.3rem 0.8rem 0.3rem 0.8rem;
+  font-size: 0.75rem;
+  display: inline-block;
+  color: var(--text);
+  vertical-align: middle;
+}
+
+svg {
+  fill: var(--text);
+  height: 1lh;
+  width: 1lh;
+  vertical-align: middle;
+}
+
+svg.small {
+  font-size: 0.8rem;
+  fill: var(--text_muted);
+  transition: 0.2s ease-in-out;
+}
+
+svg.small:hover {
+  fill: var(--accent);
+  transform: scale(1.1);
+}
+
+button {
+  color: var(--text);
+  border-radius: 0.5rem;
+  border: none;
+  background: none;
+  font-size: 0.9rem;
+  padding: 0.75rem 1rem 0.75rem 1rem;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+img {
+  object-fit: contain;
+  height: auto;
+  width: auto;
+  position: relative;
+  border-radius: 0.5rem;
+}
+
+button svg {
+  vertical-align: middle;
+}
+
+.banner img {
+  width: 100%;
+  object-fit: cover;
+  height: 25rem;
+  -webkit-mask-image: linear-gradient(
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 0) 80%
+  );
+}
+
+.banner {
+  width: 100%;
+  height: 25rem;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  padding: 1rem;
+}
+
+.left {
+  bottom: 8px;
+  left: 16px;
+}
+
+.right {
+  bottom: 8px;
+  right: 16px;
+}
+
+.bottom {
+  right: 50%;
+  bottom: 8px;
+}
+
+input {
+  border-radius: 1.5rem;
+  border: none;
+  padding: 1rem 2rem 1rem 2rem;
+  color: var(--text);
+  outline: none;
+  font-size: 0.9rem;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0 2rem 0;
+}
+
+footer {
+  margin-top: 2rem;
+}
+
+.container {
+  flex-grow: 1;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.center {
+  align-items: center;
+  align-self: center;
+}
+
+.primary {
+  background: linear-gradient(114deg, var(--primary_dim), var(--accent_dim));
+  color: var(--background);
+}
+
+.secondary {
+  border: solid 1px var(--secondary);
+  background: var(--secondary);
+}
+
+.tertiary {
+  border: solid 1px var(--border);
+}
+
+.muted {
+  color: var(--text_muted);
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.logo {
+  fill: var(--text);
+  stroke-width: 0;
+}
+
+.plugins {
+  display: flex;
+  flex: 1 0 50%;
+  width: 100%;
+  gap: 2rem;
+}
+
+.mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 650px) {
+  .no-mobile {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+  body {
+    padding: 0 10vw 5vh 10vw;
+  }
+}
